@@ -52,6 +52,12 @@
  *
  */
 
+ import 'aframe';
+ import 'aframe-extras';
+ import 'aframe-physics-system';
+ import 'aframe-environment-component';
+
+
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */

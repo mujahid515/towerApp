@@ -1,0 +1,123 @@
+[debug] [2019-04-15T16:22:42.084Z] ----------------------------------------------------------------------
+[debug] [2019-04-15T16:22:42.090Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-04-15T16:22:42.090Z] CLI Version:   6.3.1
+[debug] [2019-04-15T16:22:42.090Z] Platform:      win32
+[debug] [2019-04-15T16:22:42.090Z] Node Version:  v8.14.0
+[debug] [2019-04-15T16:22:42.095Z] Time:          Mon Apr 15 2019 17:22:42 GMT+0100 (GMT Daylight Time)
+[debug] [2019-04-15T16:22:42.095Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-15T16:22:42.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-15T16:22:42.156Z] > authorizing via signed-in user
+[debug] [2019-04-15T16:22:42.156Z] [iam] checking project tower-5106b for permissions ["firebase.projects.get"]
+[debug] [2019-04-15T16:22:42.159Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-04-15T16:22:42.160Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-04-15T16:22:42.420Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T16:22:42.472Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b:testIamPermissions  
+
+[debug] [2019-04-15T16:22:43.260Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T16:22:43.267Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b  
+ 
+[debug] [2019-04-15T16:22:44.012Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\User\Desktop\Tower\tower-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-04-15T16:23:08.728Z] Fetching environment
+[debug] [2019-04-15T16:23:08.755Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721:getServerAppConfig  
+ 
+[debug] [2019-04-15T16:23:08.758Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-15T16:23:09.072Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T16:23:09.074Z] Starting @google-cloud/functions-emulator
+[debug] [2019-04-15T16:23:09.313Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-04-15T16:23:22.789Z] Parsing function triggers
+[info] +  functions: ssr: http://localhost:5001/tower-5106b/us-central1/ssr
+[debug] [2019-04-15T16:43:18.949Z] ----------------------------------------------------------------------
+[debug] [2019-04-15T16:43:18.954Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-04-15T16:43:18.954Z] CLI Version:   6.3.1
+[debug] [2019-04-15T16:43:18.954Z] Platform:      win32
+[debug] [2019-04-15T16:43:18.954Z] Node Version:  v8.14.0
+[debug] [2019-04-15T16:43:18.959Z] Time:          Mon Apr 15 2019 17:43:18 GMT+0100 (GMT Daylight Time)
+[debug] [2019-04-15T16:43:18.959Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-15T16:43:18.988Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-15T16:43:18.990Z] > authorizing via signed-in user
+[debug] [2019-04-15T16:43:18.990Z] [iam] checking project tower-5106b for permissions ["firebase.projects.get"]
+[debug] [2019-04-15T16:43:18.995Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b:testIamPermissions  
+
+[debug] [2019-04-15T16:43:19.847Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T16:43:19.855Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b  
+ 
+[debug] [2019-04-15T16:43:20.612Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\User\Desktop\Tower\tower-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-04-15T16:43:25.267Z] Fetching environment
+[debug] [2019-04-15T16:43:25.278Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721:getServerAppConfig  
+ 
+[debug] [2019-04-15T16:43:25.279Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-15T16:43:25.609Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T16:43:25.610Z] Starting @google-cloud/functions-emulator
+[debug] [2019-04-15T16:43:25.810Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-04-15T16:43:34.255Z] Parsing function triggers
+[warn] !  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
+[debug] [2019-04-15T16:43:34.961Z] Error during trigger parsing:  Error parsing triggers: Cannot find module 'C:\Users\User\Desktop\Tower\tower-app\functions/dist/server'
+
+Try running "npm install" in your functions directory before deploying.
+[warn] !  functions: Error from emulator. Error parsing triggers: Cannot find module 'C:\Users\User\Desktop\Tower\tower-app\functions/dist/server'
+
+Try running "npm install" in your functions directory before deploying.
+[debug] [2019-04-15T16:43:34.963Z] 
+[debug] [2019-04-15T16:44:53.106Z] Error: kill ENOSYS
+    at process.kill (internal/process.js:172:20)
+    at process.listener (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at emitOne (events.js:116:13)
+    at process.emit (events.js:211:7)
+    at processEmit (C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:155:32)
+    at Signal.wrap.onsignal (internal/process.js:197:44)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-04-15T17:09:55.003Z] ----------------------------------------------------------------------
+[debug] [2019-04-15T17:09:55.008Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-04-15T17:09:55.008Z] CLI Version:   6.3.1
+[debug] [2019-04-15T17:09:55.008Z] Platform:      win32
+[debug] [2019-04-15T17:09:55.009Z] Node Version:  v8.14.0
+[debug] [2019-04-15T17:09:55.013Z] Time:          Mon Apr 15 2019 18:09:55 GMT+0100 (GMT Daylight Time)
+[debug] [2019-04-15T17:09:55.013Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-15T17:09:55.042Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-15T17:09:55.044Z] > authorizing via signed-in user
+[debug] [2019-04-15T17:09:55.044Z] [iam] checking project tower-5106b for permissions ["firebase.projects.get"]
+[debug] [2019-04-15T17:09:55.047Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-04-15T17:09:55.047Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-04-15T17:09:55.328Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T17:09:55.450Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b:testIamPermissions  
+
+[debug] [2019-04-15T17:09:56.272Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T17:09:56.276Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tower-5106b  
+ 
+[debug] [2019-04-15T17:09:57.038Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\User\Desktop\Tower\tower-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2019-04-15T17:10:01.185Z] Fetching environment
+[debug] [2019-04-15T17:10:01.195Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721:getServerAppConfig  
+ 
+[debug] [2019-04-15T17:10:01.197Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/753886346721/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-15T17:10:01.491Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-15T17:10:01.493Z] Starting @google-cloud/functions-emulator
+[debug] [2019-04-15T17:10:01.680Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/browser
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-04-15T17:10:09.155Z] Parsing function triggers
+[info] +  functions: ssr: http://localhost:5001/tower-5106b/us-central1/ssr

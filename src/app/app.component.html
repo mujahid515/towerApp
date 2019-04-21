@@ -1,21 +1,189 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<a-scene physics>
+    <!-- Player -->
+    <a-entity position="0 0.5 0">
+      <a-camera user-height="0" universal-controls position="0 0 0" jump-ability kinematic-body></a-camera>
+    </a-entity>
+
+    <!-- Ground -->
+    <a-grid static-body shadow="true" material="side: double; color: silver; transparent: true; opacity: 0" position="0 0 0"></a-grid>
+    <!-- Cubicle walls -->
+    <a-box shadow="true" static-body color="white" position="-7 0 -4.5" rotation="0 0 0" depth="0.5" height="90" width="10"></a-box>
+    <a-box shadow="true" static-body color="white" position="-7 0 -4.5" rotation="0 90 0" depth="0.5" height="90" width="5"></a-box>
+
+	  <a-entity environment="preset: contact; groundColor: silver; groundColor2: silver; groundTexture: checkerboard; skyType: atmosphere; fog: 0.8; lighting: point; lightPosition: 0 50 0; dressing: towers; dressingAmount: 70" shadow="true" lightPosition="0 0 2"></a-entity>
+    <!-- Ground Floor Start -->
+      <!-- Tower Corners -->
+      <a-entity shadow="true" static-body="shape: cylinder; cylinderAxis: y;" position="1 0.75 4" radius="1" height="15" color="silver"></a-entity>
+  	  <a-entity shadow="true" static-body="shape: cylinder; cylinderAxis: y;" position="-15 0.75 4" radius="1" height="15" color="silver"></a-entity>
+  	  <a-entity shadow="true" static-body="shape: cylinder; cylinderAxis: y;" position="1 0.75 -13" radius="1" height="15" color="silver"></a-entity>
+  	  <a-entity shadow="true" static-body="shape: cylinder; cylinderAxis: y;" position="-15 0.75 -13" radius="1" height="15" color="silver"></a-entity>
+      <!-- Walls -->
+      <a-box shadow="true" static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 0.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box shadow="true" static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 0.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box shadow="true" static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 0.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box shadow="true" static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 0.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Floor -->
+      <a-box shadow="true" static-body color="white" position="-7 0.1 -4.5" rotation="90 0 0" depth="0.2" height="20" width="20"></a-box>
+      <!-- Ceiling -->
+      <a-box shadow="true" static-body color="white" position="-7 8 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box shadow="true" id="ramp1" color="silver" width="2" height="0.5" depth="29.9" position="-2 0 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- Ground Floor End -->
+    <!-- 1st Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 5.75 4" radius="1" height="15" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 5.75 4" radius="1" height="15" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 5.75 -13" radius="1" height="15" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 5.75 -13" radius="1" height="15" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-7 5.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-7 5.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-15 5.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="1 5.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 13 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp2" color="silver" width="2" height="0.5" depth="11" position="-10 10 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp2ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 7.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp2stop1" color="silver" width="0.2" height="1" depth="8" position="-2.5 7.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp2stop2" color="silver" width="0.2" height="1" depth="8" position="-2.5 7.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 1st Floor End -->
+    <!-- 2nd Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 10.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 10.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 10.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 10.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 10.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 10.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 10.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 10.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 18 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp3" color="silver" width="2" height="0.5" depth="11" position="-10 15 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp3ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 12.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp3stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 12.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp3stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 12.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+
+    <!-- 2nd Floor End -->
+    <!-- 3rd Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 15.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 15.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 15.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 15.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 15.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 15.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 15.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 15.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 23 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp4" color="silver" width="2" height="0.5" depth="11" position="-10 20 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp4ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 17.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp4stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 17.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp4stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 17.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 3rd Floor End -->
+    <!-- 4 Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 20.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 20.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 20.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 20.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 20.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 20.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 20.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 20.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 28 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp5" color="silver" width="2" height="0.5" depth="11" position="-10 25 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp5ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 22.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp5stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 22.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp5stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 22.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 4 Floor End -->
+    <!-- 5 Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 25.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 25.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 25.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 25.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 25.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 25.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 25.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 25.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 33 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp6" color="silver" width="2" height="0.5" depth="11" position="-10 30 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp6ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 27.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp6stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 27.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp6stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 27.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 5 Floor End -->
+    <!-- 6 Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 30.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 30.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 30.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 30.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 30.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 30.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 30.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 30.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 38 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp7" color="silver" width="2" height="0.5" depth="11" position="-10 35 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp7ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 32.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp7stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 32.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp7stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 32.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 6 Floor End -->
+    <!-- 7 Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 35.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 35.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 35.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 35.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 35.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 35.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 35.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 35.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Ceiling -->
+      <a-box static-body color="white" position="-7 43 -4.5" rotation="90 0 0" depth="0.2" height="10" width="15"></a-box>
+      <!-- Ramp -->
+      <a-box id="ramp8" color="silver" width="2" height="0.5" depth="11" position="-10 40 1.5" rotation="32.5 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp8ext" color="silver" width="2" height="0.5" depth="6" position="-2.5 37.1 1.5" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp8stop1" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 37.5 2.4" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+      <a-box id="ramp8stop2" color="silver" width="0.2" height="1" depth="6.9" position="-2.95 37.5 0.6" rotation="0 90 0" static-body="" scale="" visible="" material="" geometry=""></a-box>
+    <!-- 7 Floor End -->
+    <!-- 8 Floor Start -->
+      <!-- Tower Corners -->
+      <a-cylinder static-body position="1 40.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 40.75 4" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="1 40.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+  	  <a-cylinder static-body position="-15 40.75 -13" radius="1" height="5" color="silver"></a-cylinder>
+      <!-- Walls -->
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 40.75 4" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-7 40.75 -13" depth="1" height="5" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="-15 40.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 0.1" position="1 40.75 -4" rotation="0 90 0" depth="1" height="5" width="17"></a-box>
+      <!-- Rooftop -->
+      <a-sphere static-body position="1 44.2 4" radius="1" height="2" color="silver"></a-sphere>
+  	  <a-sphere static-body position="-15 44.2 4" radius="1" height="2" color="silver"></a-sphere>
+  	  <a-sphere static-body position="1 44.2 -13" radius="1" height="2" color="silver"></a-sphere>
+  	  <a-sphere static-body position="-15 44.2 -13" radius="1" height="2" color="silver"></a-sphere>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-7 45.75 4" depth="1" height="1" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-7 45.75 -13" depth="1" height="1" width="15"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="-15 45.75 -4" rotation="0 90 0" depth="1" height="1" width="17"></a-box>
+      <a-box static-body material="side: double; color: silver; transparent: true; opacity: 1" position="1 45.75 -4" rotation="0 90 0" depth="1" height="1" width="17"></a-box>
+    <!-- 8 Floor End -->
+</a-scene>
 
 <router-outlet></router-outlet>
